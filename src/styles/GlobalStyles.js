@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     --primary:  #D98427;
+    --secondary:  #CA6F0B;
     --white: #CCC;
     --gray: #2C2C2B;
     --bgContent: #2C2C2B;
@@ -27,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Roboto, serif;
 
     overflow: hidden;
 
@@ -56,12 +57,17 @@ export const GlobalStyle = createGlobalStyle`
     border: 0px;
     border-bottom: 1px solid var(--white);
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Roboto;
     height: 30px;
 
     transition: 0.2s;
 
     resize: none;
+  }
+
+  select option:disabled {
+    color: #555;
+    font-weight: bold;
   }
 
   ::placeholder{
@@ -73,6 +79,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color:var(--overlay);
     border-radius: 8px;
     border: none;
+  }
+
+  input[type="radio"]{
+    width: 18px;
   }
 
   option{
@@ -95,14 +105,15 @@ export const GlobalStyle = createGlobalStyle`
   
   button {
     padding: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Roboto, serif;
     font-size: 18px;
+    font-weight: bold;
 
     border-radius: 10px;
     
     color: var(--bgContainer);
     background-color: var(--primary);
-    border: 1px solid var(--bgContainer);
+    border: 2px solid var(--bgContainer);
 
     transition: 0.2s;
 
@@ -122,4 +133,9 @@ export const GlobalStyle = createGlobalStyle`
       cursor: not-allowed;
     }
   }
+
+  table { page-break-inside:avoid }
+  tr    { page-break-inside:avoid; page-break-after:always }
+  thead { display:table-header-group }
+  tfoot { display:table-footer-group }
 `;

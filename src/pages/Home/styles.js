@@ -12,10 +12,19 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: 20% 80%;
+
+  > img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+
+    filter: drop-shadow(0px 0px 5px #000);
+  }
 `;
 
 export const ResumoPedido = styled.section`
-  min-width: 250px;
+  min-width: 300px;
 
   padding: 10px 20px;
   display: flex;
@@ -39,7 +48,7 @@ export const ResumoPedido = styled.section`
     padding: 15px;
 
     background-color: var(--overlay);
-    box-shadow: 0px 0px 6px var(--bgContainer);
+    box-shadow: 0px 0px 10px var(--bgContainer);
     border-radius: 10px;
 
     > h1 {
@@ -78,6 +87,11 @@ export const ResumoPedido = styled.section`
     color: var(--bgContainer);
     padding: 20px;
     background-color: var(--primary);
+    background-image: linear-gradient(
+      to bottom right,
+      var(--primary),
+      var(--secondary)
+    );
 
     border-radius: 8px;
     box-shadow: 0px 0px 6px var(--bgContainer);
@@ -136,9 +150,13 @@ export const Relatorio = styled.div`
     display: block;
     @page {
       margin: 0;
+      size: A4;
+      margin-top: 10mm;
     }
+
     margin: 1cm;
-    /* margin-bottom: 2cm; */
+    /* margin-top: 2cm;
+    padding-top: 15mm; */
   }
 
   page-break-inside: avoid;

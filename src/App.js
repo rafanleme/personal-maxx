@@ -5,6 +5,10 @@ import { GlobalStyle } from "./styles/GlobalStyles";
 function App() {
   return (
     <>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto"
+      />
       <Routes />
       <GlobalStyle />
     </>
